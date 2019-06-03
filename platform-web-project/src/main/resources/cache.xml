@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<description>Spring公共配置 </description>
+	<!-- Spring提供的基于的Ehcache实现的缓存管理器 -->
+	<bean id="cacheManagerFactory"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:ehcache.xml" />
+		<!--true:单例，一个cacheManager对象共享；false：多个对象独立 -->
+		<property name="shared" value="true" />
+		<property name="cacheManagerName" value="cacheManagerFactory" />
+	</bean>
+
+	<bean id="ehCacheCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+		<property name="cacheManager" ref="cacheManagerFactory" />
+	</bean>
+
+	<!-- noLimitCache 操作对象 -->
+	<bean id="noLimitCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheName" value="noLimitCache" />
+		<property name="cacheManager" ref="cacheManagerFactory" />
+	</bean>
+	<!-- userCache 操作对象 -->
+	<bean id="userCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheName" value="userCache" />
+		<property name="cacheManager" ref="cacheManagerFactory" />
+	</bean>
+
+	<!-- 构造用户定义的缓存类对象 	-->
+	<bean id="noLimitEhRedisCache" class="com.gta.train.platform.common.redis.util.EhRedisCacheFactory">
+		<property name="cacheName" value="noLimitCache" />
+	</bean>
+
+	<bean id="userEhCache" class="com.gta.train.platform.common.redis.util.EhRedisCacheFactory">
+		<property name="cacheName" value="userCache" />
+		<property name="useRedis" value="false" />
+	</bean>
+	<bean id="userEhRedisCache" class="com.gta.train.platform.common.redis.util.EhRedisCacheFactory">
+		<property name="cacheName" value="userCache" />
+		<property name="useRedis" value="true" />
+	</bean>
+	<!--
+	<bean id="examEhRedisCache" class="com.gta.edu.sdk.redis.util.EhRedisCacheFactory">
+		<property name="examCache" value="userCache" />
+		<property name="useRedis" value="false" />
+	</bean>-->
+	<!-- 构造用户定义的缓存类对象结束 -->
+	 <!--初始化基础数据开始-->
+	<bean id="initCacheData" class="com.gta.train.platform.config.cache.InitCacheData" init-method="getInstance"></bean>
+</beans>

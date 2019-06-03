@@ -1,0 +1,182 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,fieldset,input,textarea,blockquote,font{padding: 0px;margin: 0px; font-family:\5FAE\8F6F\96C5\9ED1;}
+input, textarea, keygen, select, button, isindex, meter, progress {-webkit-writing-mode: horizontal-tb;}
+input, textarea, keygen, select, button, isindex {
+	margin: 0em;
+	font: -webkit-small-control;
+	color: initial;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;	
+}
+h1,h2,h3,h4,h5,h6,b,strong {font-weight:800 }
+table { border-collapse: collapse; border-spacing: 0; table-layout:fixed; } 
+fieldset,img{ border:0; } 
+select,input,select,label { vertical-align:middle }
+ul,ol{ list-style: none; } 
+
+/*link*/
+a {text-decoration:none; cursor:pointer;}
+a:hover {text-decoration:none;}
+.pointer {cursor:pointer;}
+
+/* 去a虚线框 cdl clear dotted line */
+
+.cdl, aactive { outline:none; blr:expression(this.onFocus=this.blur()) }
+focus { outline:none } /* for Firefox*/ 
+
+/*clear*/
+.clear {clear:both; margin:0px; padding:0px;}
+
+/* new clearfix */
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*float*/
+.fl { float:left; display:inline; }    /*  左浮动 */
+.fr { float:right; }     /* 右浮动 */
+
+/* text */
+.textl {text-align:left;}
+.textr {text-align:right;}
+.textc {text-align:center;}
+.bold {font-weight:800;}
+
+.overflow {overflow:hidden;}
+.fn{ font-style:normal; font-weight:normal;}
+.nowrap{ white-space:nowrap;}
+.indent {text-indent:2em;}
+.ellipsis{-o-text-overflow: ellipsis; text-overflow: ellipsis;			 
+    -icab-text-overflow: ellipsis;  
+    -khtml-text-overflow: ellipsis;  
+    -moz-text-overflow: ellipsis;  
+    -webkit-text-overflow: ellipsis; 
+white-space:nowrap; overflow:hidden; }
+
+/* display and position */
+.disb {display:block;}
+.hide {display:none;}
+.inlineBlock {display:inline-block; *zoom:1; *display:inline; vertical-align:middle;}
+.absolute { position:absolute}
+.relative { position:relative;}
+/*新增相对窗口定位*/
+.fixed { position:fixed;}
+
+/* margin  */
+.nomp {margin:0px; padding:0px;}
+.nomar{margin:0px;}
+.mar10 {margin:10px;}
+.mt10 {margin-top:10px;}
+.mb10 {margin-bottom:10px;}
+.ml10 {margin-left:10px !important;}
+.mr10 {margin-right:10px;}
+.mar20 {margin:20px;}
+.mt20 {margin-top:20px;}
+.mb20 {margin-bottom:20px;}
+.ml20 {margin-left:20px;}
+.mr20 {margin-right:20px;}
+.m0a { margin:0 auto; }     /*容器内水平居中*/ 
+/* padding  */
+.nopad {padding:0px;}
+.pad10 {padding:10px;}
+.pl10 {padding-left:10px;}
+.pr10 {padding-right:10px;}
+.pb10 {padding-bottom:10px;}
+.pt10 {padding-top:10px;}
+.pad20 {padding:20px;}
+.pl20 {padding-left:20px;}
+.pr20 {padding-right:20px;}
+.pb20 {padding-bottom:20px;}
+.pt20 {padding-top:20px;}
+
+/* font */
+font {font:12px normal;}
+.nofont {font-size:0px;}
+.font12 {font-size:12px;}
+.font14 {font-size:14px;}
+.font16 {font-size:16px;}
+.font18 {font-size:18px;}
+.lh24{line-height:24px;}
+.lh18{line-height:18px;}
+
+/*CSS3.0*/
+.radius
+	{/* border radius *//*  (-moz-\-webkit-)border-top-left-radius:; \ -moz-border-radius-topleft:; */
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	}
+.shadow
+	{
+	/*box shadow*//*(-moz-\-webkit-)box-shadow:;*/
+	-moz-box-shadow: rgba(0,0,0,0.3) 0 4px 4px;
+	-webkit-box-shadow: rgba(0,0,0,0.3) 0 4px 4px;
+	-khtml-box-shadow: rgba(0,0,0,0.3) 0 4px 4px;
+	box-shadow: rgba(0,0,0,0.3) 0 4px 4px;	/*filter:progid:DXImageTransform.Microsoft.Shadow(enabled=Enabled,color=#000,Strength=4,Direction=135);*/
+	}
+
+/*隐藏文字*/
+.offScreen{
+	left: -9999px;
+    position: absolute;}
+	
+	
+.ofh { overflow:hidden; }    /*溢出隐藏 */
+.tal { text-align:left; }   /* 内容左对齐*/ 
+.tar { text-align:right; }  /*  内容右对齐 */
+.tac { text-align:center; }   /* 内容居中*/ 
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+/* 输入框隐藏边框 */
+input,button,select,textarea{ outline:none;}
+textarea{resize:none;}
+
+/*新增*/
+.b1sd{ border:1px solid #dedede;}
+.w100{ width:100%;}
+.c333{ color:#333;}
+.c666{ color:#666;}
+.c999{ color:#999;}
+.bgfff{ background:#fff;}
+.cf00{ color:#f00;}
+/*a:visited{color:#333;}
+a:active{color:#004276;}
+a:link{color:#333;}*/
+/*a:hover{ color:#ec7443;}*/
+
+/*pre标签超出换行*/
+pre{ wite-space:pre-warp; word-wrap:break-word;}
+
+/*拆分字母*/
+.wordBreak{ table-layout:fixed; word-break:break-all; overflow:hidden;}
+
+/*透明度*/
+.opacity{ opacity:0; filter:alpha(opacity=0); -moz-opacity:0; -khtml-opacity:0;}
+
+/*去掉谷歌Input黄色背景*/
+input{-webkit-box-shadow::0 0 0px 1000px white inset;}

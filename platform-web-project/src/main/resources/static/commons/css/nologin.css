@@ -1,0 +1,33 @@
+.layui-layer-content{height:auto !important;}
+.fixed-wrap{position: fixed;top:0;left:50%;margin-left:-125px;width: 250px;height: 130px;background: url(../images/icon-radius.png) no-repeat;text-align: center;color: #fff;z-index:22}
+.fixed-state{font-size: 18px;margin-top: 13px;margin-bottom: 10px;}
+.fixed-time{font-size: 42px}
+.fixed-detail{position: fixed;top:19.16667%;left:0;width: 46px;height: 120px;line-height:18px;margin-top:-60px;padding-left: 10px;padding-top:22px;font-size:16px;color:#fff;background: url(../images/icon-detail.png) no-repeat}
+.fixed-data{position: fixed;left: 0;top:26.66667%;width: 340px;padding-right:10px;height: 520px;background: url(../images/icon-bg.png) no-repeat}
+.fixed-head{width:340px;height:50px;line-height:50px;font-size:16px;border-top-right-radius:8px;text-align:center;color:#fefeff;background: #7b7de5}
+.fixed-title{font-size: 14px;padding-bottom:5px;border-bottom:1px solid #d4d5ff;color:#686ad1;}
+.fixed-box{padding: 20px;max-height: 396px;overflow: hidden;}
+.fixed-con{padding: 10px;border-radius: 5px;background: #f1f1f8;margin-top: 10px;margin-bottom: 20px;max-height: 160px;overflow: auto;}
+.fixed-btn{display:block;width: 100%;height: 34px;line-height: 34px;text-align:center;border-radius:5px;color:#fff;background: #7b7de5}
+.logo-text{font-size: 18px;color: #fff;padding-top: 4px;box-sizing: border-box;}
+.title01{font-size: 18px;color: #56576a;margin-top: 65px;margin-bottom:18px;text-align: center}
+.title02{font-size: 40px;margin-bottom:75px;font-weight: bold;color: #333;text-align: center}
+.guide-box{width:840px;margin: 0 auto}
+.guide-ul{margin-left:-8.3333%;}
+.guide-li{position:relative;float:left;display: inline-block;width: 200px;height: 200px;margin-left:8.33333%;border:1px solid #b1b2fd;border-radius: 20px;font-size:20px;text-align: center;color: #4d4fba;cursor: pointer;transition:all .2s linear}
+.guide-li:hover{color:#fff;border:1px solid #8385ef;background: #8587f2;box-shadow: 0 3px 10px #c2c2d9}
+.guide-li i{display: inline-block;width:100%;height:80px;margin:30px 0 20px 0;text-align: center}
+.guide-ico01{background: url(../images/ico01.png) 58px 0 no-repeat}
+.guide-ico02{background: url(../images/ico02.png) 58px 0 no-repeat}
+.guide-ico03{background: url(../images/ico03.png) 62px 0 no-repeat}
+.guide-li:hover .guide-ico01{background: url(../images/ico01-hover.png) 58px 0 no-repeat}
+.guide-li:hover .guide-ico02{background: url(../images/ico02-hover.png) 58px 0 no-repeat}
+.guide-li:hover .guide-ico03{background: url(../images/ico03-hover.png) 62px 0 no-repeat}
+.guide-hide{position: absolute;top:200px;left: 0;width: 100%;padding-top: 20px}
+.guide-hide a{display: inline-block;width: 100%;height: 50px;line-height: 50px;margin-bottom:10px;border:1px solid #b1b2fd;border-radius: 50px;font-size:16px;text-align: center;color: #4d4fba;background: #fff}
+.guide-hide a:hover{border:1px solid #8c8efb;background: #8c8efb;color: #fff}
+	
+.moreOpera{height:80px;background:#efefef;width:100%;text-align:center;}
+.leftP{width:60px;height:60px;background:#f75342 url(../images/add-1.png) no-repeat center center;background-size:40px;border-radius:100%;}
+.rightP{width:60px;height:60px;background:#f75342 url(../images/add-2.png) no-repeat center center;background-size:30px;border-radius:100%;}
+.comTxt{line-height:60px;margin-left:10px;color:#f75342;font-size:16px;}

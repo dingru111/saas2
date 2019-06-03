@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.system.SystemBaseAccountDao">
+	<resultMap id="SystemBaseAccountResultMap" type="com.gta.train.platform.saas.entity.system.SystemBaseAccount">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="account" jdbcType="VARCHAR" property="account"/>
+		    <result column="name" jdbcType="VARCHAR" property="name"/>
+		    <result column="system_id" jdbcType="VARCHAR" property="systemId"/>
+		    <result column="t_s_id" jdbcType="VARCHAR" property="tSId"/>
+		    <result column="sys_create_time" jdbcType="TIMESTAMP" property="sysCreateTime"/>
+		    <result column="account_source" jdbcType="INTEGER" property="accountSource"/>
+		    <result column="account_role" jdbcType="INTEGER" property="accountRole"/>
+		    <result column="enrollment_year" jdbcType="INTEGER" property="enrollmentYear"/>
+		    <result column="account_type" jdbcType="INTEGER" property="accountType"/>
+		    <result column="expiration_time" jdbcType="TIMESTAMP" property="expirationTime"/>
+		    <result column="login_times" jdbcType="INTEGER" property="loginTimes"/>
+		    <result column="country_id" jdbcType="VARCHAR" property="countryId"/>
+		    <result column="province_id" jdbcType="VARCHAR" property="provinceId"/>
+		    <result column="city_id" jdbcType="VARCHAR" property="cityId"/>
+		    <result column="sch_com_name" jdbcType="VARCHAR" property="schComName"/>
+		    <result column="customer_type" jdbcType="INTEGER" property="customerType"/>
+			</resultMap>
+
+	<sql id="SystemBaseAccount_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="account != null and account != ''">
+		    and t.account=#{account,jdbcType=VARCHAR}
+		</if>
+		        <if test="name != null and name != ''">
+		    and t.name=#{name,jdbcType=VARCHAR}
+		</if>
+		        <if test="systemId != null and systemId != ''">
+		    and t.system_id=#{systemId,jdbcType=VARCHAR}
+		</if>
+		        <if test="tSId != null and tSId != ''">
+		    and t.t_s_id=#{tSId,jdbcType=VARCHAR}
+		</if>
+		        <if test="sysCreateTime != null and sysCreateTime != ''">
+		    and t.sys_create_time=#{sysCreateTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="accountSource != null and accountSource != ''">
+		    and t.account_source=#{accountSource,jdbcType=INTEGER}
+		</if>
+		        <if test="accountRole != null and accountRole != ''">
+		    and t.account_role=#{accountRole,jdbcType=INTEGER}
+		</if>
+		        <if test="enrollmentYear != null and enrollmentYear != ''">
+		    and t.enrollment_year=#{enrollmentYear,jdbcType=INTEGER}
+		</if>
+		        <if test="accountType != null and accountType != ''">
+		    and t.account_type=#{accountType,jdbcType=INTEGER}
+		</if>
+		        <if test="expirationTime != null and expirationTime != ''">
+		    and t.expiration_time=#{expirationTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="loginTimes != null and loginTimes != ''">
+		    and t.login_times=#{loginTimes,jdbcType=INTEGER}
+		</if>
+		        <if test="countryId != null and countryId != ''">
+		    and t.country_id=#{countryId,jdbcType=VARCHAR}
+		</if>
+		        <if test="provinceId != null and provinceId != ''">
+		    and t.province_id=#{provinceId,jdbcType=VARCHAR}
+		</if>
+		        <if test="cityId != null and cityId != ''">
+		    and t.city_id=#{cityId,jdbcType=VARCHAR}
+		</if>
+		        <if test="schComName != null and schComName != ''">
+		    and t.sch_com_name=#{schComName,jdbcType=VARCHAR}
+		</if>
+		        <if test="customerType != null and customerType != ''">
+		    and t.customer_type=#{customerType,jdbcType=INTEGER}
+		</if>
+			 </sql>
+
+    <sql id="SystemBaseAccount_Column_List">
+         t.id,
+                   t.account,
+                    t.name,
+                    t.system_id,
+                    t.t_s_id,
+                    t.sys_create_time,
+                    t.account_source,
+                    t.account_role,
+                    t.enrollment_year,
+                    t.account_type,
+                    t.expiration_time,
+                    t.login_times,
+                    t.country_id,
+                    t.province_id,
+                    t.city_id,
+                    t.sch_com_name,
+                    t.customer_type
+             </sql>
+ 
+	 
+</mapper> 

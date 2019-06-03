@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="platform.web.project.part-1.0-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
+        <dependent-module archiveName="platform.base.persist-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/platform.base.persist/platform.base.persist">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="platform.frame.common-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/platform.frame.common/platform.frame.common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="platform.frame.dao-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/platform.frame.dao/platform.frame.dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="platform.frame.model-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/platform.frame.model/platform.frame.model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="platform.frame.service-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/platform.frame.service/platform.frame.service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/flatform-ebank/target/classes"/>
+        <property name="context-root" value="platform.web.project.part"/>
+        <property name="component.exclusion.patterns"/>
+    </wb-module>
+</project-modules>

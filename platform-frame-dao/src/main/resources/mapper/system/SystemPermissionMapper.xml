@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.system.SystemPermissionDao">
+	<resultMap id="SystemPermissionResultMap" type="com.gta.train.platform.saas.entity.system.SystemPermission">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="system_id" jdbcType="VARCHAR" property="systemId"/>
+		    <result column="resource_id" jdbcType="VARCHAR" property="resourceId"/>
+		    <result column="permission" jdbcType="VARCHAR" property="permission"/>
+		    <result column="permission_type" jdbcType="VARCHAR" property="permissionType"/>
+		    <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+		    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+		    <result column="is_del" jdbcType="INTEGER" property="isDel"/>
+		    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId"/>
+		    <result column="update_user_id" jdbcType="VARCHAR" property="updateUserId"/>
+			</resultMap>
+
+	<sql id="SystemPermission_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="systemId != null and systemId != ''">
+		    and t.system_id=#{systemId,jdbcType=VARCHAR}
+		</if>
+		        <if test="resourceId != null and resourceId != ''">
+		    and t.resource_id=#{resourceId,jdbcType=VARCHAR}
+		</if>
+		        <if test="permission != null and permission != ''">
+		    and t.permission=#{permission,jdbcType=VARCHAR}
+		</if>
+		        <if test="permissionType != null and permissionType != ''">
+		    and t.permission_type=#{permissionType,jdbcType=VARCHAR}
+		</if>
+		        <if test="createTime != null and createTime != ''">
+		    and t.create_time=#{createTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="updateTime != null and updateTime != ''">
+		    and t.update_time=#{updateTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="isDel != null and isDel != ''">
+		    and t.is_del=#{isDel,jdbcType=INTEGER}
+		</if>
+		        <if test="createUserId != null and createUserId != ''">
+		    and t.create_user_id=#{createUserId,jdbcType=VARCHAR}
+		</if>
+		        <if test="updateUserId != null and updateUserId != ''">
+		    and t.update_user_id=#{updateUserId,jdbcType=VARCHAR}
+		</if>
+			 </sql>
+
+    <sql id="SystemPermission_Column_List">
+         t.id,
+                   t.system_id,
+                    t.resource_id,
+                    t.permission,
+                    t.permission_type,
+                    t.create_time,
+                    t.update_time,
+                    t.is_del,
+                    t.create_user_id,
+                    t.update_user_id
+             </sql>
+ 
+	 
+</mapper> 

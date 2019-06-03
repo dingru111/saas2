@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-base-mq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-base-persist" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-frame-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-frame-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-frame-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-frame-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-web-project" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platform-web-project-part" charset="UTF-8" />
+  </component>
+</project>

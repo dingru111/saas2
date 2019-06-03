@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>tanhukuang</title>
+<link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/select2.min.css">
+<link rel="stylesheet" href="js/layui/css/layui.css">
+<link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+	<div class="cl1 box">弹出框</div>
+    <div class="cl2 box">弹出框</div>
+    <div class="cl3 box">弹出框</div>
+    <div class="cl4 box">弹出框</div>
+    <div class="cl5 box">弹出框</div>
+    <div class="cl6 box">用户信息弹出框</div>
+    
+    <div id="test1"></div>
+    <div id="slideTest1"></div>
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/layui/layui.js"></script>
+<script>
+layui.use(['layer','laypage'], function(){
+	var layer = layui.layer;
+	var laypage = layui.laypage;
+	$(".cl1").click(function(){
+		layer.open({
+			type: 1,
+			title: false,
+			closeBtn: 0,
+			area: ['400px', '170px'],
+			btn: ['确定'],
+			content: '<div class="txtC" style="padding:20px 20px 0;">'+
+				'<div class="tipTxt"><img src="images/icon12.png"> <span>无法删除!</span></div>'+
+				'<div class="mt10">该角色下已创建账号，请更改账号的角色后再试</div>'+
+			'</div>'
+	  	});
+	});
+	$(".cl2").click(function(){
+		layer.open({
+			type: 1,
+			title:"提示",
+			area: ['400px', '180px'],
+			btn: ['确定','取消'],
+			content: '<div class="txtC" style="padding:20px 20px 0;">'+
+				'<div class="tipTxt"><img src="images/icon12.png"> <span>删除后不可恢复，确定删除？</span></div>'+
+			'</div>'
+		});
+	});
+	$(".cl3").click(function(){
+		layer.open({
+			type: 1,
+			title: false,
+			closeBtn: 0,
+			area: ['300px', '160px'],
+			btn: ['确定','取消'],
+			content: '<div class="txtC" style="padding:20px 20px 0;">'+
+				'<div class="tipTxt"><img src="images/icon13.png"> <span>确定重置？</span></div>'+
+				'<div class="mt10">重置后密码为111aaa</div>'+
+			'</div>'
+	  	});
+	});
+	$(".cl4").click(function(){
+		layer.open({
+			type: 1,
+			title: false,
+			closeBtn: 0,
+			area: ['200px', '80px'],
+			time:1000,
+			content: '<div class="txtC" style="padding:20px 20px 0;">'+
+				'<div class="tipTxt"><img src="images/icon14.png"> <span>创建成功！</span></div>'+
+			'</div>'
+	  	});
+	});
+	$(".cl5").click(function(){
+		layer.open({
+			type: 1,
+			title: false,
+			closeBtn: 0,
+			area: ['200px', '80px'],
+			time:1000,
+			content: '<div class="txtC" style="padding:20px 20px 0;">'+
+				'<div class="tipTxt"><img src="images/icon16.png"> <span>创建成功！</span></div>'+
+			'</div>'
+	  	});
+	});
+	$(".cl6").click(function(){
+		layer.open({
+			type: 1,
+			title: "用户信息",
+			area: ['800px', '600px'],
+			btn: ['确定','取消'],
+			content: '<div id="ap" style="margin:30px 35px;">'+
+				'<div class="clearfix">'+
+					'<div class="fl leftBL">账号状态：</div>'+
+					'<div class="AccountType fl color1">正常</div>'+
+					'<div class="AccountTel fl color1">手机已认证（18055553333）</div>'+
+				'</div>'+
+				'<div class="bgTit mt10">'+
+					'<div class="UserTipTit ust1">学校/公司</div>'+
+				'</div>'+
+				'<div class="clearfix mt10">'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">学校/公司名称：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">国家：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">省份：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">城市：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">二级绑定单位：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">客户类型：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+				'</div>'+
+				'<div class="bgTit mt10">'+
+					'<div class="UserTipTit ust2">个人信息</div>'+
+				'</div>'+
+				'<div class="clearfix mt10">'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">账号：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">所属系统：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">姓名：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">授课专业：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">手机号码：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">研究方向：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">邮箱：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">专业：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">职务/身份：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">年级：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">账号创建时间：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">班级：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">账号来源：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">学号：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">账号角色：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">入学年份：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">账号类型：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">微信号：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">账号到期时间：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+					'<div class="clearfix mt10 fl">'+
+						'<div class="fl leftBB">登录次数：</div>'+
+						'<input type="text" placeholder="" class="input3 fl">'+
+					'</div>'+
+				'</div>'+
+				'<div class="bgTit mt10">'+
+					'<div class="UserTipTit" style="padding:0 25px;background:#ecf2ff;min-width:30px;">备注</div>'+
+				'</div>'+
+				'<textarea class="UserTipTxt mt20"></textarea>'+
+			'</div>'
+	  	});
+	});
+	
+	laypage.render({
+		elem: 'test1'
+		,count: 70 //数据总数，从服务端得到
+		,jump: function(obj, first){
+			//obj包含了当前分页的所有参数，比如：
+			console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+			console.log(obj.limit); //得到每页显示的条数
+			
+			//首次不执行
+			if(!first){
+			  //do something
+			}
+		}
+	});
+}); 
+</script>
+</html>

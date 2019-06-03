@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.system.SystemAccountDao">
+	<resultMap id="SystemAccountResultMap" type="com.gta.train.platform.saas.entity.system.SystemAccount">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="account_id" jdbcType="VARCHAR" property="accountId"/>
+		    <result column="instruction_profession" jdbcType="VARCHAR" property="instructionProfession"/>
+		    <result column="phone" jdbcType="VARCHAR" property="phone"/>
+		    <result column="research_direction" jdbcType="VARCHAR" property="researchDirection"/>
+		    <result column="mail" jdbcType="VARCHAR" property="mail"/>
+		    <result column="profession" jdbcType="VARCHAR" property="profession"/>
+		    <result column="job" jdbcType="INTEGER" property="job"/>
+		    <result column="grade" jdbcType="VARCHAR" property="grade"/>
+		    <result column="class_name" jdbcType="VARCHAR" property="className"/>
+		    <result column="sno" jdbcType="VARCHAR" property="sno"/>
+		    <result column="wx_account" jdbcType="VARCHAR" property="wxAccount"/>
+		    <result column="account_status" jdbcType="INTEGER" property="accountStatus"/>
+		    <result column="identification_code" jdbcType="VARCHAR" property="identificationCode"/>
+		    <result column="remarks" jdbcType="VARCHAR" property="remarks"/>
+		    <result column="not_accreditation" jdbcType="INTEGER" property="notAccreditation"/>
+		    <result column="sec_binding" jdbcType="VARCHAR" property="secBinding"/>
+		    <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+		    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+		    <result column="is_del" jdbcType="INTEGER" property="isDel"/>
+		    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId"/>
+		    <result column="update_user_id" jdbcType="VARCHAR" property="updateUserId"/>
+			</resultMap>
+
+	<sql id="SystemAccount_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="accountId != null and accountId != ''">
+		    and t.account_id=#{accountId,jdbcType=VARCHAR}
+		</if>
+		        <if test="instructionProfession != null and instructionProfession != ''">
+		    and t.instruction_profession=#{instructionProfession,jdbcType=VARCHAR}
+		</if>
+		        <if test="phone != null and phone != ''">
+		    and t.phone=#{phone,jdbcType=VARCHAR}
+		</if>
+		        <if test="researchDirection != null and researchDirection != ''">
+		    and t.research_direction=#{researchDirection,jdbcType=VARCHAR}
+		</if>
+		        <if test="mail != null and mail != ''">
+		    and t.mail=#{mail,jdbcType=VARCHAR}
+		</if>
+		        <if test="profession != null and profession != ''">
+		    and t.profession=#{profession,jdbcType=VARCHAR}
+		</if>
+		        <if test="job != null and job != ''">
+		    and t.job=#{job,jdbcType=INTEGER}
+		</if>
+		        <if test="grade != null and grade != ''">
+		    and t.grade=#{grade,jdbcType=VARCHAR}
+		</if>
+		        <if test="className != null and className != ''">
+		    and t.class_name=#{className,jdbcType=VARCHAR}
+		</if>
+		        <if test="sno != null and sno != ''">
+		    and t.sno=#{sno,jdbcType=VARCHAR}
+		</if>
+		        <if test="wxAccount != null and wxAccount != ''">
+		    and t.wx_account=#{wxAccount,jdbcType=VARCHAR}
+		</if>
+		        <if test="accountStatus != null and accountStatus != ''">
+		    and t.account_status=#{accountStatus,jdbcType=INTEGER}
+		</if>
+		        <if test="identificationCode != null and identificationCode != ''">
+		    and t.identification_code=#{identificationCode,jdbcType=VARCHAR}
+		</if>
+		        <if test="remarks != null and remarks != ''">
+		    and t.remarks=#{remarks,jdbcType=VARCHAR}
+		</if>
+		        <if test="notAccreditation != null and notAccreditation != ''">
+		    and t.not_accreditation=#{notAccreditation,jdbcType=INTEGER}
+		</if>
+		        <if test="secBinding != null and secBinding != ''">
+		    and t.sec_binding=#{secBinding,jdbcType=VARCHAR}
+		</if>
+		        <if test="createTime != null and createTime != ''">
+		    and t.create_time=#{createTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="updateTime != null and updateTime != ''">
+		    and t.update_time=#{updateTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="isDel != null and isDel != ''">
+		    and t.is_del=#{isDel,jdbcType=INTEGER}
+		</if>
+		        <if test="createUserId != null and createUserId != ''">
+		    and t.create_user_id=#{createUserId,jdbcType=VARCHAR}
+		</if>
+		        <if test="updateUserId != null and updateUserId != ''">
+		    and t.update_user_id=#{updateUserId,jdbcType=VARCHAR}
+		</if>
+			 </sql>
+
+    <sql id="SystemAccount_Column_List">
+         t.id,
+                   t.account_id,
+                    t.instruction_profession,
+                    t.phone,
+                    t.research_direction,
+                    t.mail,
+                    t.profession,
+                    t.job,
+                    t.grade,
+                    t.class_name,
+                    t.sno,
+                    t.wx_account,
+                    t.account_status,
+                    t.identification_code,
+                    t.remarks,
+                    t.not_accreditation,
+                    t.sec_binding,
+                    t.create_time,
+                    t.update_time,
+                    t.is_del,
+                    t.create_user_id,
+                    t.update_user_id
+             </sql>
+ 
+	 
+</mapper> 

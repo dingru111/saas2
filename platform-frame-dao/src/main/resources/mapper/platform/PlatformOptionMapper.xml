@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.platform.PlatformOptionDao">
+	<resultMap id="PlatformOptionResultMap" type="com.gta.train.platform.saas.entity.platform.PlatformOption">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="opt_name" jdbcType="VARCHAR" property="optName"/>
+		    <result column="opt_type" jdbcType="INTEGER" property="optType"/>
+		    <result column="opt_interceptor" jdbcType="VARCHAR" property="optInterceptor"/>
+		    <result column="opt_interceptor_type" jdbcType="INTEGER" property="optInterceptorType"/>
+			</resultMap>
+
+	<sql id="PlatformOption_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="optName != null and optName != ''">
+		    and t.opt_name=#{optName,jdbcType=VARCHAR}
+		</if>
+		        <if test="optType != null and optType != ''">
+		    and t.opt_type=#{optType,jdbcType=INTEGER}
+		</if>
+		        <if test="optInterceptor != null and optInterceptor != ''">
+		    and t.opt_interceptor=#{optInterceptor,jdbcType=VARCHAR}
+		</if>
+		        <if test="optInterceptorType != null and optInterceptorType != ''">
+		    and t.opt_interceptor_type=#{optInterceptorType,jdbcType=INTEGER}
+		</if>
+			 </sql>
+
+    <sql id="PlatformOption_Column_List">
+         t.id,
+                   t.opt_name,
+                    t.opt_type,
+                    t.opt_interceptor,
+                    t.opt_interceptor_type
+             </sql>
+ 
+	 
+</mapper> 

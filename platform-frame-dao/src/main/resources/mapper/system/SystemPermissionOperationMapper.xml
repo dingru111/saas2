@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.system.SystemPermissionOperationDao">
+	<resultMap id="SystemPermissionOperationResultMap" type="com.gta.train.platform.saas.entity.system.SystemPermissionOperation">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="system_id" jdbcType="VARCHAR" property="systemId"/>
+		    <result column="resource_id" jdbcType="VARCHAR" property="resourceId"/>
+		    <result column="permission_id" jdbcType="VARCHAR" property="permissionId"/>
+		    <result column="operation" jdbcType="VARCHAR" property="operation"/>
+		    <result column="operation_name" jdbcType="VARCHAR" property="operationName"/>
+		    <result column="option_script" jdbcType="VARCHAR" property="optionScript"/>
+		    <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+		    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+		    <result column="is_del" jdbcType="INTEGER" property="isDel"/>
+		    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId"/>
+		    <result column="update_user_id" jdbcType="VARCHAR" property="updateUserId"/>
+			</resultMap>
+
+	<sql id="SystemPermissionOperation_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="systemId != null and systemId != ''">
+		    and t.system_id=#{systemId,jdbcType=VARCHAR}
+		</if>
+		        <if test="resourceId != null and resourceId != ''">
+		    and t.resource_id=#{resourceId,jdbcType=VARCHAR}
+		</if>
+		        <if test="permissionId != null and permissionId != ''">
+		    and t.permission_id=#{permissionId,jdbcType=VARCHAR}
+		</if>
+		        <if test="operation != null and operation != ''">
+		    and t.operation=#{operation,jdbcType=VARCHAR}
+		</if>
+		        <if test="operationName != null and operationName != ''">
+		    and t.operation_name=#{operationName,jdbcType=VARCHAR}
+		</if>
+		        <if test="optionScript != null and optionScript != ''">
+		    and t.option_script=#{optionScript,jdbcType=VARCHAR}
+		</if>
+		        <if test="createTime != null and createTime != ''">
+		    and t.create_time=#{createTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="updateTime != null and updateTime != ''">
+		    and t.update_time=#{updateTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="isDel != null and isDel != ''">
+		    and t.is_del=#{isDel,jdbcType=INTEGER}
+		</if>
+		        <if test="createUserId != null and createUserId != ''">
+		    and t.create_user_id=#{createUserId,jdbcType=VARCHAR}
+		</if>
+		        <if test="updateUserId != null and updateUserId != ''">
+		    and t.update_user_id=#{updateUserId,jdbcType=VARCHAR}
+		</if>
+			 </sql>
+
+    <sql id="SystemPermissionOperation_Column_List">
+         t.id,
+                   t.system_id,
+                    t.resource_id,
+                    t.permission_id,
+                    t.operation,
+                    t.operation_name,
+                    t.option_script,
+                    t.create_time,
+                    t.update_time,
+                    t.is_del,
+                    t.create_user_id,
+                    t.update_user_id
+             </sql>
+ 
+	 
+</mapper> 

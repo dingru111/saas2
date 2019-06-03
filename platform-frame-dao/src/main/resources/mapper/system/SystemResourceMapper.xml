@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.system.SystemResourceDao">
+	<resultMap id="SystemResourceResultMap" type="com.gta.train.platform.saas.entity.system.SystemResource">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="system_id" jdbcType="VARCHAR" property="systemId"/>
+		    <result column="resource_name" jdbcType="VARCHAR" property="resourceName"/>
+		    <result column="pid" jdbcType="VARCHAR" property="pid"/>
+		    <result column="is_permission" jdbcType="INTEGER" property="isPermission"/>
+		    <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+		    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+		    <result column="is_del" jdbcType="INTEGER" property="isDel"/>
+		    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId"/>
+		    <result column="update_user_id" jdbcType="VARCHAR" property="updateUserId"/>
+			</resultMap>
+
+	<sql id="SystemResource_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="systemId != null and systemId != ''">
+		    and t.system_id=#{systemId,jdbcType=VARCHAR}
+		</if>
+		        <if test="resourceName != null and resourceName != ''">
+		    and t.resource_name=#{resourceName,jdbcType=VARCHAR}
+		</if>
+		        <if test="pid != null and pid != ''">
+		    and t.pid=#{pid,jdbcType=VARCHAR}
+		</if>
+		        <if test="isPermission != null and isPermission != ''">
+		    and t.is_permission=#{isPermission,jdbcType=INTEGER}
+		</if>
+		        <if test="createTime != null and createTime != ''">
+		    and t.create_time=#{createTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="updateTime != null and updateTime != ''">
+		    and t.update_time=#{updateTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="isDel != null and isDel != ''">
+		    and t.is_del=#{isDel,jdbcType=INTEGER}
+		</if>
+		        <if test="createUserId != null and createUserId != ''">
+		    and t.create_user_id=#{createUserId,jdbcType=VARCHAR}
+		</if>
+		        <if test="updateUserId != null and updateUserId != ''">
+		    and t.update_user_id=#{updateUserId,jdbcType=VARCHAR}
+		</if>
+			 </sql>
+
+    <sql id="SystemResource_Column_List">
+         t.id,
+                   t.system_id,
+                    t.resource_name,
+                    t.pid,
+                    t.is_permission,
+                    t.create_time,
+                    t.update_time,
+                    t.is_del,
+                    t.create_user_id,
+                    t.update_user_id
+             </sql>
+ 
+	 
+</mapper> 

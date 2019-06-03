@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gta.train.platform.iml" filepath="$PROJECT_DIR$/gta.train.platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-base-mq/platform.base.mq.iml" filepath="$PROJECT_DIR$/platform-base-mq/platform.base.mq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-base-persist/platform.base.persist.iml" filepath="$PROJECT_DIR$/platform-base-persist/platform.base.persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-frame-common/platform.frame.common.iml" filepath="$PROJECT_DIR$/platform-frame-common/platform.frame.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-frame-dao/platform.frame.dao.iml" filepath="$PROJECT_DIR$/platform-frame-dao/platform.frame.dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-frame-model/platform.frame.model.iml" filepath="$PROJECT_DIR$/platform-frame-model/platform.frame.model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-frame-service/platform.frame.service.iml" filepath="$PROJECT_DIR$/platform-frame-service/platform.frame.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-web-project/platform.web.project.iml" filepath="$PROJECT_DIR$/platform-web-project/platform.web.project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform-web-project-part/platform.web.project.part.iml" filepath="$PROJECT_DIR$/platform-web-project-part/platform.web.project.part.iml" />
+    </modules>
+  </component>
+</project>

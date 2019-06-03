@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.system.SystemRoleResourceDao">
+	<resultMap id="SystemRoleResourceResultMap" type="com.gta.train.platform.saas.entity.system.SystemRoleResource">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="system_role_id" jdbcType="VARCHAR" property="systemRoleId"/>
+		    <result column="system_resource_id" jdbcType="VARCHAR" property="systemResourceId"/>
+			</resultMap>
+
+	<sql id="SystemRoleResource_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="systemRoleId != null and systemRoleId != ''">
+		    and t.system_role_id=#{systemRoleId,jdbcType=VARCHAR}
+		</if>
+		        <if test="systemResourceId != null and systemResourceId != ''">
+		    and t.system_resource_id=#{systemResourceId,jdbcType=VARCHAR}
+		</if>
+			 </sql>
+
+    <sql id="SystemRoleResource_Column_List">
+         t.id,
+                   t.system_role_id,
+                    t.system_resource_id
+             </sql>
+ 
+	 
+</mapper> 

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>用户中心</title>
+<link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/select2.min.css">
+<link rel="stylesheet" href="js/layui/css/layui.css">
+<link rel="stylesheet" href="css/common.css">
+<style>
+.layui-laydate .layui-this{background:#1ed4cd !important;}
+</style>
+</head>
+<body>
+	<!--头部开始-->
+	<div class="head-wrap the-bg">
+		<div class="wid-fixed">
+			<div class="fl marl-20">
+				<div class="logo fl">
+					<img src="images/logo.png" alt="">
+				</div>
+				<!--<div class="logo-text fl">国泰安商业银行  ·  网上银行个人版</div>-->
+				<!--<div class="head-seach fl  marl-104 mart-15 bg-co-6a bor-no">
+					<input type="text " class="bg-co-6a" placeholder="搜索...">
+					<div class="seach-icon"></div>
+				</div>-->
+			</div>
+            <div class="fl nav flex2">
+            	<a class="NavLi" href="">首页</a>
+                <a class="NavLi" href="">角色管理</a>
+                <a class="NavLi" href="">账号管理</a>
+                <a class="NavLi active" href="">用户中心</a>
+                <a class="NavLi" href="">数据分析</a>
+                <a class="NavLi" href="">基础数据</a>
+            </div>
+			<div class="fr head-right" style="margin-top:12px;width:200px;">
+                <!--<img class="AllMain fr" src="images/exit.png"/>-->
+                <div class="fr clearfix">
+                    <img class="fl" src="images/headpor.png"/>
+                    <div class="UserName fl">
+                        乔治娜
+                        <div class="TabUser DisNone">
+                            <img  class="mt10" src="images/headpor.png"/>
+                            <div>乔治娜</div>
+                            <div class="active">退出</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="mian">
+    	<div class="pd20">
+            <div class="bgFFF pd20">
+            	<div class="clearfix bt" style="padding-bottom:15px;">
+                    <div class="clearfix fl">
+                        <div class="fl leftBL">创建时间</div>
+                        <div class="fl">
+                            <div class="btn2 active">不限</div>
+                            <div class="btn2">3个月内</div>
+                            <div class="btn2">3-6个月内</div>
+                            <div class="btn2">6-12个月内</div>
+                            <div class="btn2">12个月以上</div>
+                        </div>
+                    </div>
+                    <div class="clearfix fr">
+                        <div class="fl leftBL">日期范围</div>
+                        <input type="text" class="inputDate fl" id="inputDate" readonly>
+                    </div>
+                </div>
+                <div class="mt10 clearfix">
+                	<div class="clearfix fl UserCenterList">
+                		<div class="fl leftBL">所在国家</div>
+                        <select class="select3">
+                        	<option>999</option>
+                        </select>
+                	</div>
+                    <div class="clearfix fl UserCenterList">
+                		<div class="fl leftBL">所在省份</div>
+                        <select class="select3">
+                        	<option>999</option>
+                        </select>
+                	</div>
+                    <div class="clearfix fl UserCenterList">
+                		<div class="fl leftBL">所在城市</div>
+                        <select class="select3">
+                        	<option>999</option>
+                        </select>
+                	</div>
+                    <div class="clearfix fl UserCenterList">
+                		<div class="fl leftBL">客户类型</div>
+                        <select class="select3">
+                        	<option>999</option>
+                        </select>
+                	</div>
+                    <div class="clearfix fl UserCenterList">
+                		<div class="fl leftBL">账号来源</div>
+                        <select class="select3">
+                        	<option>999</option>
+                        </select>
+                	</div>
+                    <div class="clearfix fl UserCenterList">
+                		<div class="fl leftBL">所属系统</div>
+                        <select class="select3">
+                        	<option>999</option>
+                        </select>
+                	</div>
+                </div>
+                <div class="txtC mt10">
+                	<div class="btn3">查询</div>
+                </div>
+          	</div>
+        </div>
+    	<div class="pd20">
+            <div class="bgFFF">
+                <div class="clearfix pdlr20 bt">
+                    <div class="fl LeftTitle">用户账号列表</div>
+                    <div class="fr RightTxt clearfix">
+                        <input type="search" class="search fl" placeholder="请输入系统名称"/>
+                        <div class="searchBtn fl"><img src="images/icon3.png"/></div>
+                    </div>
+                </div>
+                <div class="pd20">
+                	<div class="DownloadBtn">导出操作日志</div>
+                    <table class="MainTable mt10">
+                        <tr class="bg-gray">
+                            <th width="50"><div class="ckBox"></div></th>
+                            <th width="50">序号</th>
+                            <th>国家</th>
+                            <th>省份</th>
+                            <th>城市</th>
+                            <th>学习/公司名称</th>
+                            <th>姓名</th>
+                            <th>账号角色</th>
+                            <th>账号来源</th>
+                            <th>创建时间</th>
+                            <th>登陆次数</th>
+                            <th>客户类型</th>
+                            <th>所属系统</th>
+                            <th>操作结果</th>
+                        </tr>
+                        <tr>
+                            <td><div class="ckBox active"></div></td>
+                            <td>1</td>
+                            <td>中国</td>
+                            <td>安徽省</td>
+                            <td>合肥市</td>
+                            <td>深圳国泰安教育科技有限公司</td>
+                            <td>林小姐</td>
+                            <td>正式注册</td>
+                            <td>上扣扣上课</td>
+                            <td>2019/05/05</td>
+                            <td>10</td>
+                            <td>正式</td>
+                            <td>以渔有方</td>
+                            <td><span class="color2 curP">查看</span></td>
+                        </tr><tr>
+                            <td><div class="ckBox active"></div></td>
+                            <td>1</td>
+                            <td>中国</td>
+                            <td>安徽省</td>
+                            <td>合肥市</td>
+                            <td>深圳国泰安教育科技有限公司</td>
+                            <td>林小姐</td>
+                            <td>正式注册</td>
+                            <td>上扣扣上课</td>
+                            <td>2019/05/05</td>
+                            <td>10</td>
+                            <td>正式</td>
+                            <td>以渔有方</td>
+                            <td><span class="color2 curP">查看</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="ckBox active"></div></td>
+                            <td>1</td>
+                            <td>中国</td>
+                            <td>安徽省</td>
+                            <td>合肥市</td>
+                            <td>深圳国泰安教育科技有限公司</td>
+                            <td>林小姐</td>
+                            <td>正式注册</td>
+                            <td>上扣扣上课</td>
+                            <td>2019/05/05</td>
+                            <td>10</td>
+                            <td>正式</td>
+                            <td>以渔有方</td>
+                            <td><span class="color2 curP">查看</span></td>
+                        </tr>
+                        <tr class="active">
+                            <td><div class="ckBox active"></div></td>
+                            <td>1</td>
+                            <td>中国</td>
+                            <td>安徽省</td>
+                            <td>合肥市</td>
+                            <td>深圳国泰安教育科技有限公司</td>
+                            <td>林小姐</td>
+                            <td>正式注册</td>
+                            <td>上扣扣上课</td>
+                            <td>2019/05/05</td>
+                            <td>10</td>
+                            <td>正式</td>
+                            <td>以渔有方</td>
+                            <td><span class="color2 curP">查看</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="ckBox"></div></td>
+                            <td>1</td>
+                            <td>中国</td>
+                            <td>安徽省</td>
+                            <td>合肥市</td>
+                            <td>深圳国泰安教育科技有限公司</td>
+                            <td>林小姐</td>
+                            <td>正式注册</td>
+                            <td>上扣扣上课</td>
+                            <td>2019/05/05</td>
+                            <td>10</td>
+                            <td>正式</td>
+                            <td>以渔有方</td>
+                            <td><span class="color2 curP">查看</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="copyBottom">Copyright @ 2017 国泰安教育信息技术股份有限公司</div>
+            <div class="clear"></div>
+		</div>
+	</div>
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/general.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/layui/layui.js"></script>
+<script src="js/common.js"></script>
+</body>
+<script>
+$("select").select2( {minimumResultsForSearch: Infinity});
+layui.use(['laydate', 'layer'], function () {
+	var laydate = layui.laydate;
+    laydate.render({ 
+	  elem: '#inputDate'
+	  ,type: 'datetime'
+	  ,format: 'yyyy年MM月dd日'
+	  ,range: true //或 range: '~' 来自定义分割字符
+	});
+});
+</script>
+</html>

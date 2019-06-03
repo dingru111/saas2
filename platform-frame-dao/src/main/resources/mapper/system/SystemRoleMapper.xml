@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gta.train.platform.saas.dao.system.SystemRoleDao">
+	<resultMap id="SystemRoleResultMap" type="com.gta.train.platform.saas.entity.system.SystemRole">
+	            <id column="id" jdbcType="VARCHAR" property="id"/>
+        		    <result column="role_name" jdbcType="VARCHAR" property="roleName"/>
+		    <result column="description" jdbcType="VARCHAR" property="description"/>
+		    <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+		    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+		    <result column="is_del" jdbcType="INTEGER" property="isDel"/>
+		    <result column="create_user_id" jdbcType="VARCHAR" property="createUserId"/>
+		    <result column="update_user_id" jdbcType="VARCHAR" property="updateUserId"/>
+			</resultMap>
+
+	<sql id="SystemRole_Where_Clause">
+	            <if test="id != null and id != ''">
+		    and t.id=#{id,jdbcType=VARCHAR}
+		</if>
+			            <if test="roleName != null and roleName != ''">
+		    and t.role_name=#{roleName,jdbcType=VARCHAR}
+		</if>
+		        <if test="description != null and description != ''">
+		    and t.description=#{description,jdbcType=VARCHAR}
+		</if>
+		        <if test="createTime != null and createTime != ''">
+		    and t.create_time=#{createTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="updateTime != null and updateTime != ''">
+		    and t.update_time=#{updateTime,jdbcType=TIMESTAMP}
+		</if>
+		        <if test="isDel != null and isDel != ''">
+		    and t.is_del=#{isDel,jdbcType=INTEGER}
+		</if>
+		        <if test="createUserId != null and createUserId != ''">
+		    and t.create_user_id=#{createUserId,jdbcType=VARCHAR}
+		</if>
+		        <if test="updateUserId != null and updateUserId != ''">
+		    and t.update_user_id=#{updateUserId,jdbcType=VARCHAR}
+		</if>
+			 </sql>
+
+    <sql id="SystemRole_Column_List">
+         t.id,
+                   t.role_name,
+                    t.description,
+                    t.create_time,
+                    t.update_time,
+                    t.is_del,
+                    t.create_user_id,
+                    t.update_user_id
+             </sql>
+ 
+	 
+</mapper> 
