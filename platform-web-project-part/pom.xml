@@ -33,7 +33,7 @@
 		<json.lib.version>2.3</json.lib.version>
 		<spring.data.redis.version>1.8.4.RELEASE</spring.data.redis.version>
 		<jackson.core.version>2.9.2</jackson.core.version>
-		<jackson.databind.version>2.9.2</jackson.databind.version>
+		<jackson.databind.version>2.9.10.7</jackson.databind.version>
 		<jackson.annotations.version>2.9.2</jackson.annotations.version>
 		<flatform.frame.sdk.version>0.0.1-SNAPSHOT</flatform.frame.sdk.version>
 		<HikariCP.version>2.7.2</HikariCP.version>
