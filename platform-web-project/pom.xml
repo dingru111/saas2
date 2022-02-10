@@ -37,7 +37,7 @@
 		<jackson.annotations.version>2.9.2</jackson.annotations.version>
 		<flatform.frame.sdk.version>0.0.1-SNAPSHOT</flatform.frame.sdk.version>
 		<HikariCP.version>2.7.2</HikariCP.version>
-		<hibernate.core.version>5.1.2.Final</hibernate.core.version>
+		<hibernate.core.version>5.4.24.Final</hibernate.core.version>
 		<spring.boot.starter.data.jpa.version>1.5.14.RELEASE</spring.boot.starter.data.jpa.version>
 		<spring.jdbc.version>4.3.4.RELEASE</spring.jdbc.version>
 		<org.mybatis.version>3.4.5</org.mybatis.version>
