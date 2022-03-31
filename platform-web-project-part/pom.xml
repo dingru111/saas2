@@ -12,7 +12,7 @@
  	<packaging>war</packaging>  
  	<properties>
  		<spring.boot.starter.test.version>1.5.2.RELEASE</spring.boot.starter.test.version>
-		<spring.boot.starter.web.version>1.5.2.RELEASE</spring.boot.starter.web.version>
+		<spring.boot.starter.web.version>2.5.12</spring.boot.starter.web.version>
 		<spring.boot.starter.tomcat.version>1.5.14.RELEASE</spring.boot.starter.tomcat.version>
 		<flatform.user.model.version>1.0-SNAPSHOT</flatform.user.model.version>
 		<!-- <flatform.base.persis.version>1.0-SNAPSHOT</flatform.base.persis.version> -->
