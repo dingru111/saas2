@@ -52,7 +52,7 @@
 		<poi.ooxml.version>3.16-beta1</poi.ooxml.version>
 		<validation.api.version>1.1.0.Final</validation.api.version>
 		<pinyin4j.version>2.5.1</pinyin4j.version>
-		<fastjson.version>1.2.38</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<httpclient.version>4.5.3</httpclient.version>
  	</properties>
 	<dependencies>
